@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { getSpell } from "../lib/getSpell";
+import Link from "next/link";
 
 interface Spell {
   index: string;
@@ -101,7 +102,9 @@ const SpellTable: React.FC<SpellTableProps> = ({ spells }) => {
             {spellList.map((spell) => {
               return (
                 <tr key={spell.name}>
-                  <td>{spell.name}</td>
+                  <Link href={`/spell/${spell.name}`}>
+                    <td>{spell.name}</td>
+                  </Link>
                   {/* <td>{spell.school.name}</td>
                   <td>{spell.casting_time}</td>
                   <td>{spell.range}</td>
