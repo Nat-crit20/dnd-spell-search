@@ -27,35 +27,6 @@ interface FullSpell {
 const SpellTable: React.FC<SpellTableProps> = ({ spells }) => {
   const [currentSpellLevel, setCurrentSpellLevel] = useState<number>(0);
   const [spellList, setSpellList] = useState<FullSpell[]>();
-  // useEffect(() => {
-  //   const getSessionSpell = sessionStorage.getItem(
-  //     `Level_${currentSpellLevel}`
-  //   );
-  //   if (getSessionSpell) {
-  //     setSpellList(JSON.parse(getSessionSpell));
-  //   } else {
-  //     const fetchSpells = async () => {
-  //       const newSpells: FullSpell[] = await Promise.all(
-  //         spells
-  //           .filter((spell) => {
-  //             return spell.level === currentSpellLevel;
-  //           })
-  //           .map((spell, i) => {
-  //             if (i === 1) {
-  //               return;
-  //             }
-  //             return getSpell(spell.index);
-  //           })
-  //       );
-  //       sessionStorage.setItem(
-  //         `Level_${currentSpellLevel}`,
-  //         JSON.stringify(newSpells)
-  //       );
-  //       setSpellList(newSpells);
-  //     };
-  //     fetchSpells();
-  //   }
-  // }, [currentSpellLevel, spells]);
 
   useEffect(() => {
     setSpellList(() => {

@@ -16,4 +16,9 @@ export interface FullSpell {
   range: string;
   duration: string;
   components: string[];
+  damage: {
+    damage_type: {
+      name: string;
+    };
+  };
 }

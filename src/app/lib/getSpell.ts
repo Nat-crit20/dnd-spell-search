@@ -13,7 +13,7 @@ export async function getAllSpells(school: string) {
 }
 
 export async function getSpell(spellIndex: string) {
-  const spellData = await fetch(BASE_URL + `/api/2014/spells` + spellIndex);
+  const spellData = await fetch(BASE_URL + `/api/2014/spells/` + spellIndex);
   const spell = await spellData.json();
 
   return spell;

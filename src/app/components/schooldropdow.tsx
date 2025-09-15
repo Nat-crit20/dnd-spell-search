@@ -6,7 +6,7 @@ const SchoolDropdown = ({ changeSchool }) => {
   //   const [currentSelect, setSelectedSchool] = useState("Abjuration");
   return (
     <div>
-      <label htmlFor="School">Please select a school of magic</label>
+      <label htmlFor="School">Please select a school of magic: </label>
       <select
         onChange={(e) => changeSchool(e.target.value)}
         name="School"
